@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminDashBoard.dashBoardController">
+   <children>
+      <Pane prefHeight="83.0" prefWidth="800.0" style="-fx-background-color: #b64fc8;">
+         <children>
+            <Label layoutX="28.0" layoutY="22.0" text="Welcome !!!" textFill="#801610">
+               <font>
+                  <Font name="Bauhaus 93" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="83.0" prefHeight="418.0" prefWidth="208.0" style="-fx-background-color: #ea80fc;">
+         <children>
+            <VBox layoutX="17.0" layoutY="48.0" prefHeight="323.0" prefWidth="177.0">
+               <children>
+                  <JFXButton prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #ffb2ff;" text="Add" textFill="#96072d">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="PLUS_CIRCLE" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #ffb2ff;" text="Edit" textFill="#96072d">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="PENCIL_SQUARE" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #ffb2ff;" text="Delete" textFill="#96072d">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="TIMES_CIRCLE" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #ffb2ff;" text="Logout" textFill="#96072d">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="POWER_OFF" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <TableView layoutX="255.0" layoutY="137.0" prefHeight="298.0" prefWidth="502.0">
+        <columns>
+          <TableColumn prefWidth="73.0" text="ID" />
+          <TableColumn prefWidth="109.0" text="Name" />
+            <TableColumn prefWidth="92.0" text="Position" />
+            <TableColumn prefWidth="122.0" text="Email" />
+            <TableColumn prefWidth="87.0" text="Salary" />
+        </columns>
+      </TableView>
+      <JFXTextField layoutX="275.0" layoutY="95.0" prefHeight="25.0" prefWidth="250.0" />
+      <FontAwesomeIconView glyphName="SEARCH" layoutX="254.0" layoutY="119.0" size="17" />
+      <JFXButton layoutX="686.0" layoutY="448.0" prefHeight="26.0" prefWidth="71.0" style="-fx-background-color: #ffb2ff;">
+         <graphic>
+            <FontAwesomeIconView glyphName="DOWNLOAD" size="17" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
