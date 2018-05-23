@@ -1,14 +1,20 @@
 package sample;
 
+import adminDashBoard.dashBoardController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -54,7 +60,11 @@ public class Controller implements Initializable {
         try {
             if (this.loginModel.isLogin(this.Username.getText(), this.Password.getText())) ;
             if (id.equals(Username.getText()) && pass.equals(Password.getText())) {
-                JOptionPane.showMessageDialog(null, "Welcome to MIT SAIYAI APP");
+//                JOptionPane.showMessageDialog(null, "Welcome to MIT SAIYAI APP");
+
+                Stage stage = (Stage) this.btnLogin.getScene().getWindow();
+                stage.close();
+                dashBoard();
             } else {
                 JOptionPane.showMessageDialog(null, "Your Username or Password is invalid.", "Warning Message", JOptionPane.WARNING_MESSAGE);
             }
@@ -64,5 +74,24 @@ public class Controller implements Initializable {
 
     }//Login
 
+    private void dashBoard() {
+        try {
+            Stage dashBoardStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = loader.load(getClass().getResource("/adminDashBoard/dashBoard.fxml").openStream());
+            dashBoardController db = loader.getController();
 
-    }//class
+            Scene scene = new Scene(root);
+            dashBoardStage.setScene(scene);
+            dashBoardStage.setTitle("MIT DashBoard");
+            dashBoardStage.setResizable(false);
+            dashBoardStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }//dashBoard
+
+
+}//class

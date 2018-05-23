@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminDashBoard.dashBoardController">
    <children>
       <Pane prefHeight="83.0" prefWidth="800.0" style="-fx-background-color: #b64fc8;">
@@ -87,10 +86,13 @@
       </TableView>
       <JFXTextField layoutX="275.0" layoutY="95.0" prefHeight="25.0" prefWidth="250.0" />
       <FontAwesomeIconView glyphName="SEARCH" layoutX="254.0" layoutY="119.0" size="17" />
-      <JFXButton layoutX="686.0" layoutY="448.0" prefHeight="26.0" prefWidth="71.0" style="-fx-background-color: #ffb2ff;">
+      <JFXButton layoutX="673.0" layoutY="448.0" prefHeight="30.0" prefWidth="84.0" style="-fx-background-color: #ffb2ff;" text="Load">
          <graphic>
             <FontAwesomeIconView glyphName="DOWNLOAD" size="17" />
          </graphic>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
       </JFXButton>
    </children>
 </AnchorPane>
